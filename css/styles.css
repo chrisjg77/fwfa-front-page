@@ -1,0 +1,1108 @@
+/*
+===============================================
+BASE STYLES
+===============================================
+*/
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+input[type='text'],
+select,
+textarea {
+  font-size: 1em;
+  -webkit-border-radius:  0.25em;
+  -moz-border-radius:     0.25em;
+   border-radius:         0.25em;
+  -webkit-box-sizing:     border-box;
+  -moz-box-sizing:        border-box;
+   box-sizing:            border-box;
+}
+
+input[type='text'] {
+  width: 100%;
+  margin: 0;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+}
+
+select {
+  width: 100%;
+  height: 2.75em;
+  margin: 0;
+  font-size: 1em;
+  -webkit-appearance: menulist-button;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.paddingfix {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.layout-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-list li {
+  float: left;
+}
+
+
+/*
+===============================================
+BUTTONS
+===============================================
+*/
+
+.button {
+  display: inline-block;
+  padding: 0.75em;
+  text-align: center;
+  background: rgb(234,234,234); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(234,234,234,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+  color: #000;
+  border: 1px solid #bbb;
+  -webkit-border-radius:  0.25em;
+  -moz-border-radius:     0.25em;
+   border-radius:         0.25em;
+  -webkit-box-sizing:     border-box;
+  -moz-box-sizing:        border-box;
+   box-sizing:            border-box;
+}
+
+.button:hover {
+  background: rgb(238,238,238); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(221,221,221,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(221,221,221,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(221,221,221,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.button.selected {
+  background: #666;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+  border-color: #333;
+  color: #fff;
+}
+
+.button-set .button-row {
+  margin-bottom: 2%;
+}
+
+.button-set .button-row > div {
+  float: left;
+}
+
+.button-row .button {
+  width: 100%;
+}
+
+.button-row.three-up > div,
+.button-row.one-up-field > div {
+  width: 32%;
+  margin-right: 2%;
+}
+
+.button-row.three-up > div:last-child {
+  margin-right: 0;
+}
+
+.button-row.one-up-field > div:last-child {
+  width: 66%;
+  margin: 0;
+}
+
+.button.hidden {
+  display: none;
+}
+
+
+/*
+===============================================
+TABS
+===============================================
+*/
+
+.tabs {
+  width: 100%;
+  display: table;
+  border-top: 1px solid #ddd;
+}
+
+.tabs li {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tabs li {
+  font-weight: bold;
+  color: #aaa;
+  background: #eee;
+}
+
+.tabs li.active {
+  color: #000;
+  background: transparent;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+/*
+===============================================
+SCAFFOLDING
+===============================================
+*/
+
+
+.wrapper {
+  width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em 2em;
+}
+
+.feature,
+.signup-form,
+.overall-fundraising {
+  padding: 1em;
+}
+
+.feature h2,
+.signup-form h2,
+.overall-fundraising h2,
+.candidate-fundraising h2,
+.news-and-press h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
+}
+
+.overall-fundraising,
+.candidate-fundraising,
+.news-and-press,
+.signup-form {
+  border-top: 1px solid #ddd;
+}
+
+.load-more {
+  display: none;
+  padding: 0.75em 0 0.75em 0;
+  text-align: center;
+  /*border-top: 1px solid #eee;*/
+}
+
+.load-more i {
+  font-size: 1.25em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/*
+===============================================
+NAV BAR
+===============================================
+*/
+
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-spacer {
+  height: 1.25em;
+  background: rgba(255,255,255,0.6);
+}
+
+.nav-content {
+  height: 4em;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+
+/*
+===============================================
+BOOM COUNTERS
+===============================================
+*/
+
+.boom-counter-overlay,
+.progress-dividers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.progress-dividers {
+  font-size: 0.8rem;
+}
+
+.progress-dividers li {
+  height: 100%;
+  color: #999;
+  border-left: 1px solid rgba(255,255,255,0.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.progress-dividers li:first-child {
+  border-left: none;
+}
+
+.progress-dividers.quarters li {
+  position: relative;
+  width: 25%;
+}
+
+.progress-dividers .divider-label {
+  position: absolute;
+  right: -1.25em;
+  bottom: -1.75em;
+}
+
+.boom-counter-base,
+.boom-counter-fill {
+  height: 0.75em;
+  -webkit-border-radius:  0.5em;
+  -moz-border-radius:     0.5em;
+   border-radius:         0.5em;
+}
+
+.boom-counter-base {
+  position: relative;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.boom-counter-fill {
+  width: 0;
+  background: #66A344;
+}
+
+
+/*
+===============================================
+FEATURE
+===============================================
+*/
+
+.feature {
+  height: 14em; /* Temp */
+  background: #999;
+}
+
+
+/*
+===============================================
+OVERALL FUNDRAISING
+===============================================
+*/
+
+.overall-fundraising .statistics,
+.overall-fundraising .masthead {
+  float: left;
+}
+
+.overall-fundraising .statistics {
+  width: 65%;
+}
+
+.overall-fundraising .masthead {
+  width: 31%;
+  margin-left: 4%;
+  padding-left: 4%;
+  border-left: 1px solid #ddd;
+}
+
+.overall-fundraising .masthead p {
+  margin-bottom: 0.75em;
+  font-size: 0.8em;
+  line-height: 1.35em;
+  color: #666;
+}
+
+.overall-fundraising .masthead .learn-more-button {
+  display: inline-block;
+  font-size: 0.8em;
+  color: #000;
+  /*background: #888;*/
+  /*padding: 0.35em 1em;*/
+  margin-top: 0.5em;
+  /*-webkit-border-radius:  1em;
+  -moz-border-radius:     1em;
+   border-radius:         1em;*/
+}
+
+.overall-fundraising-header {
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}
+
+.overall-fundraising .to-date {
+  float: left;
+  color: #666;
+}
+
+.overall-fundraising .goal {
+  float: right;
+  /*margin-right: 25%;*/
+  font-weight: bold;
+}
+
+.overall-fundraising .goal-label {
+  font-weight: normal;
+  color: #666;
+}
+
+.overall-fundraising .goal i {
+  font-size: 0.8em;
+  margin: -2em 0.15em 0 0.15em;
+}
+
+.overall-fundraising .boom-counter {
+  position: relative;
+  font-size: 2em;
+}
+
+.overall-fundraising .boom-counter,
+.overall-fundraising .donate-button {
+  float: left;
+}
+
+.overall-fundraising .boom-counter {
+  width: 75%;
+}
+
+.overall-fundraising .donate-button {
+  width: 25%;
+  margin-bottom: 2rem;
+}
+
+.overall-fundraising .donate-button a {
+  float: right;
+  display: inline-block;
+  color: #fff;
+  background: #444;
+  font-size: 0.85em;
+  padding: 0.35em 0;
+  width: 85%;
+  -webkit-border-radius:  1em;
+  -moz-border-radius:     1em;
+   border-radius:         1em;
+   text-align: center;
+}
+
+.boom-counter-goal-highlight.outer,
+.boom-counter-goal-highlight.inner {
+  position: absolute;
+  background: rgba(102, 163, 68, 0.13);
+  top: 0;
+  -webkit-border-radius:  50%;
+  -moz-border-radius:     50%;
+   border-radius:         50%;
+}
+
+.boom-counter-goal-highlight.outer {
+  font-size: 0.75em;
+  right: -1.5em;
+  height: 4em;
+  width: 4em;
+  top: -1.45em;
+  z-index: -1;
+}
+
+.boom-counter-goal-highlight.inner {
+  width: 2em;
+  height: 2em;
+  top: 1.5em;
+  left: 0.5em;
+  margin-top: -1em;
+  border: 0.5em solid #fff;
+}
+
+.fundraising-categories {
+  margin-top: 3em;
+}
+
+.fundraising-categories li {
+  width: 25%;
+}
+
+.fundraising-categories span {
+  display: block;
+  text-align: center;
+}
+
+.fundraising-categories .figure {
+  font-size: 1.85em;
+  font-weight: bold;
+}
+
+.fundraising-categories .label {
+  font-size: 0.8em;
+  color: #666;
+}
+
+
+/*
+===============================================
+CANDIDATE FUNDRAISING
+===============================================
+*/
+
+.candidate-fundraising {
+  background: #eee;
+}
+
+.candidate-fundraising .content {
+  padding: 2em;
+}
+
+.candidate-fundraising h2 {
+  position: relative;
+  padding: 0 3em 0 5.25em;
+  margin-top: 0.5em;
+}
+
+.candidate-fundraising h2 .header-icon,
+.more-info h2 .header-icon {
+  position: absolute;
+  top: -0.35em;
+  left: 2.75em;
+  height: 2em;
+  width: 2em;
+  background: #bbb;
+  text-align: center;
+  -webkit-border-radius:  50%;
+  -moz-border-radius:     50%;
+   border-radius:         50%;
+}
+
+.candidate-fundraising h2 .header-icon i,
+.more-info h2 .header-icon i {
+  position: relative;
+  top: 0.35em;
+}
+
+.candidate-fundraising h2 .view-all-link,
+.more-info h2 .view-all-link {
+  float: right;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #000;
+  vertical-align: middle;
+}
+
+.candidates {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0 3em;
+  font-size: 0.9em;
+}
+
+.candidates .next-arrow,
+.candidates .previous-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 1.3em;
+  color: #fff;
+  background: #888;
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: -0.65em;
+  text-align: center;
+  -webkit-border-radius:  0.25em;
+  -moz-border-radius:     0.25em;
+   border-radius:         0.25em;
+}
+
+.candidates .next-arrow i,
+.candidates .previous-arrow i {
+  position: relative;
+  top: 0.15em;
+}
+
+.candidates .previous-arrow {
+  left: 0;
+  opacity: 0.3;
+}
+
+.candidates .next-arrow {
+  right: 0;
+}
+
+
+.candidates li,
+.candidate-wrapper,
+.candidate-meta {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.candidates li {
+  float: left;
+  display: table;
+  width: 33.3333%;
+  padding: 1em;
+  border-top: 1px solid #eee;
+}
+
+.candidate-meta {
+  padding: 1em;
+  background: #fff;
+  -webkit-border-radius:  0.25em;
+  -moz-border-radius:     0.25em;
+   border-radius:         0.25em;
+  border: 1px solid #bbb;
+}
+
+.candidate-wrapper {
+  -webkit-border-radius:  0.35em;
+  -moz-border-radius:     0.35em;
+   border-radius:         0.35em;
+  border: 0.25em solid rgba(0,0,0,0.05);
+}
+
+.candidates .candidate-headshot,
+.candidates .candidate-info {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.candidates .candidate-headshot {
+  width: 20%;
+}
+
+.candidates .candidate-headshot img {
+  width: 100%;
+}
+
+.candidates .candidate-info {
+  width: 80%;
+  padding-left: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.candidates .candidate-info .candidate-name,
+.candidates .candidate-info .candidate-seat,
+.candidates .candidate-info .candidate-progress {
+  display: block;
+}
+
+.candidates .candidate-info .candidate-name {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.candidates .candidate-info .candidate-seat,
+.candidates .candidate-info .candidate-progress {
+  font-size: 0.85em;
+  color: #999;
+  margin-bottom: 0.5em;
+}
+
+.candidates .candidate-info .progress-figures {
+  color: #444;
+  font-weight: bold;
+}
+
+
+/*
+===============================================
+MORE INFO
+===============================================
+*/
+
+.more-info {
+  padding-top: 1em;
+  border-top: 1px solid #ddd;
+}
+
+.more-info .content {
+  padding-left: 5.75em;
+  padding-right: 5.75em;
+}
+
+.more-info .news-and-press h2 {
+  position: relative;
+  padding-top: 0;
+  padding-left: 2.25em;
+}
+
+.more-info .news-and-press h2 .header-icon {
+  left: -0.25em;
+}
+
+.news-and-press,
+.signup-form {
+  float: left;
+  border-top: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.news-and-press {
+  width: 65%;
+  margin-right: 4%;
+  padding-right: 4%;
+  border-right: 1px solid #ddd;
+}
+
+.signup-form {
+  width: 31%;
+}
+
+
+/*
+===============================================
+NEWS & PRESS
+===============================================
+*/
+
+.news-and-press h2 {
+  margin-bottom: 1.25em;
+  padding-top: 1em;
+}
+
+.news-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-content .timestamp {
+  font-size: 0.75em;
+  color: #999;
+  margin-top: 0.5em;
+}
+
+.news-content li {
+  color: #666;
+  padding: 0.75em 0;
+  border-top: 1px solid #eee;
+}
+
+.news-content li:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.news-content .tweet-content,
+.news-content .news-title {
+  font-size: 0.8em;
+}
+
+.news-content .twitter-username {
+  color: #444;
+  font-weight: bold;
+}
+
+/*
+===============================================
+SIGNUP FORM
+===============================================
+*/
+
+.signup-form {
+  padding: 0;
+}
+
+.signup-form h2 {
+  font-size: 1em;
+}
+
+.form-row {
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-column {
+  padding-right: 0.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:    border-box;
+   box-sizing:        border-box;
+}
+
+.form-column:last-child {
+  padding-right: 0;
+}
+
+.form-column.zip,
+.form-column.submit {
+  float: left;
+}
+
+.form-column.zip {
+  width: 70%;
+}
+
+.form-column.submit {
+  width: 30%;
+}
+
+.form-column.submit .button {
+  width: 100%;
+}
+
+
+/*
+===============================================
+MEDIA QUERIES
+===============================================
+*/
+
+@media (max-width: 840px) {
+
+  .overall-fundraising,
+  .more-info .news-content,
+  .more-info .signup-form {
+    font-size: 0.85em;
+  }
+
+  .more-info .news-and-press {
+    width: 60%;
+  }
+
+  .more-info .signup-form {
+    width: 36%;
+  }
+
+  .more-info .news-and-press h2 {
+    font-size: 1.25em;
+  }
+
+  .candidates li {
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  /*
+  ========================= 
+  BASE
+  ========================= 
+  */
+
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  /*
+  ========================= 
+  SCAFFOLDING
+  ========================= 
+  */
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .load-more {
+    display: block;
+  }
+
+  .feature h2,
+  .signup-form h2,
+  .overall-fundraising h2,
+  .candidate-fundraising h2,
+  .news-and-press h2 {
+    /*text-align: center;*/
+    padding: 0.5em 0 0 3em;
+  }
+
+  .candidate-fundraising h2 .header-icon {
+    left: 0.75em;
+    top: 0.25em;
+    font-size: 0.9em;
+  }
+
+  .overall-fundraising,
+  .more-info .news-content {
+    font-size: 1em;
+  }
+
+  /*
+  ========================= 
+  NAV BAR
+  ========================= 
+  */
+
+  .nav-spacer {
+    display: none;
+  }
+
+  .nav-content {
+    height: 3em;
+  }
+
+  /*
+  ========================= 
+  FEATURE
+  ========================= 
+  */
+
+  .feature {
+    height: 8em; /* Temp */
+    background: #999;
+  }
+
+  /*
+  ========================= 
+  OVERALL FUNDRAISING
+  ========================= 
+  */
+
+  .overall-fundraising-header,
+  .overall-fundraising .boom-counter {
+    width: 100%;
+  }
+
+  .overall-fundraising .donate-button {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+
+  .overall-fundraising .donate-button a {
+    width: 100%;
+    font-size: 1.1em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    -webkit-border-radius:  1.5em;
+    -moz-border-radius:     1.5em;
+    -border-radius:         1.5em;
+  }
+
+  .overall-fundraising-header {
+    font-size: 0.9em;
+  }
+
+  .overall-fundraising .statistics {
+    width: 100%;
+  }
+
+  .overall-fundraising .fundraising-categories {
+    display: none;
+  }
+
+  .overall-fundraising .masthead {
+    display: none;
+  }
+
+  .overall-fundraising .boom-counter-goal-highlight.outer {
+    display: none;
+  }
+
+  /*
+  ========================= 
+  CANDIDATE FUNDRAISING
+  ========================= 
+  */
+
+  .candidate-fundraising {
+    background: #fff;
+  }
+
+  .candidates {
+    font-size: 1em;
+    padding: 0;
+  }
+
+  .candidate-fundraising .content {
+    padding: 0;
+  }
+
+  .candidate-fundraising h2 .view-all-link {
+    display: none;
+  }
+
+  .candidates .next-arrow,
+  .candidates .previous-arrow {
+    display: none;
+  }
+
+  .candidates li {
+    float: none;
+    width: 100%;
+  }
+
+  .candidates li:nth-child(3) {
+    padding-top: 0.5em;
+    border-top: none;
+  }
+
+  .candidates li:nth-child(even) {
+    background: #f7f7f7;
+  }
+
+  .candidate-wrapper,
+  .candidate-meta {
+    border: none;
+  }
+
+  .candidate-meta {
+    padding: 0;
+    background: transparent;
+  }
+
+  /*
+  ========================= 
+  MORE INFO
+  ========================= 
+  */
+
+  .more-info {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .more-info .content {
+    padding: 0;
+  }
+
+  .more-info .news-and-press,
+  .more-info .signup-form {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .more-info .news-and-press {
+    padding-right: 0;
+  }
+
+  /*
+  ========================= 
+  NEWS & PRESS
+  ========================= 
+  */
+
+  .news-and-press {
+    border-top: 1px solid #ddd;
+  }
+
+  .news-content li {
+    padding: 1em;
+  }
+
+  .news-content .tweet-content,
+  .news-content .news-title {
+    font-size: 0.9em;
+  }
+
+  .news-content li:nth-child(even) {
+    background: #f7f7f7;
+  }
+
+  .more-info .news-and-press h2 {
+    padding-left: 3.25em;
+    padding-top: 1em;
+  }
+
+  .more-info .news-and-press h2 .view-all-link {
+    display: none;
+  }
+
+  .more-info .news-and-press h2 .header-icon {
+    left: 0.75em;
+    top: 0.65em;
+  }
+
+  /*
+  ========================= 
+  SIGNUP FORM
+  ========================= 
+  */
+
+  .signup-form {
+    background: #f7f7f7;
+    padding: 1em;
+    border-top: 1px solid #ddd;
+  }
+
+  .signup-form h2 {
+    font-size: 1.15em;
+    padding: 0;
+    text-align: center;
+  }
+
+  .form-row {
+    font-size: 1em;
+  }
+
+}
