@@ -60,7 +60,7 @@ $(function() {
   // ======================================================
 
   $(document).ready(function() {
-    setContentOffset('.nav-bar', '.feature');
+    // setContentOffset('.nav-bar', '.feature');
 
     setTimeout(function() {
       setBoomCounters($('.boom-counter'));
@@ -72,7 +72,7 @@ $(function() {
   // ======================================================
 
   $(window).resize(function() {
-    setContentOffset('.nav-bar', '.feature');
+    // setContentOffset('.nav-bar', '.feature');
     updateBoomCounters($('.boom-counter'));
   });
 

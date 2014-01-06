@@ -343,9 +343,15 @@ FEATURE
 */
 
 .feature {
-  height: 14em; /* Temp */
+  display: none;
+  margin-top: 0;
+  max-height: 470px;
   background: #999;
+  padding: 0;
+  overflow: hidden;
 }
+
+.feature img { width: 124%; margin-left: -12%; }
 
 
 /*
@@ -438,7 +444,7 @@ OVERALL FUNDRAISING
   float: right;
   display: inline-block;
   color: #fff;
-  background: #444;
+  background: #c9431b;
   font-size: 0.85em;
   padding: 0.35em 0;
   width: 85%;
@@ -527,7 +533,8 @@ CANDIDATE FUNDRAISING
   left: 2.75em;
   height: 2em;
   width: 2em;
-  background: #bbb;
+  background: #c9431b;
+  color: #fff;
   text-align: center;
   -webkit-border-radius:  50%;
   -moz-border-radius:     50%;
@@ -1106,3 +1113,14 @@ MEDIA QUERIES
   }
 
 }
+
+@media (min-width: 768px) {
+
+  .feature { display: block; }
+
+
+}
+
+
+
+
