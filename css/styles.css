@@ -606,7 +606,7 @@ CANDIDATE FUNDRAISING
 .candidates .next-arrow i,
 .candidates .previous-arrow i {
   position: relative;
-  top: 0.35em;
+  top: 0.25em;
 }
 
 .candidates .previous-arrow {
