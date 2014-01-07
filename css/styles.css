@@ -26,6 +26,7 @@ p {
 a,
 a:hover {
   text-decoration: none;
+  color: #4488ab;
 }
 
 input[type='text'],
@@ -386,7 +387,7 @@ OVERALL FUNDRAISING
 .overall-fundraising .masthead .learn-more-button {
   display: inline-block;
   font-size: 0.8em;
-  color: #000;
+  color: #4488ab;
   /*background: #888;*/
   /*padding: 0.35em 1em;*/
   margin-top: 0.5em;
@@ -552,7 +553,6 @@ CANDIDATE FUNDRAISING
   float: right;
   font-weight: normal;
   font-size: 0.9rem;
-  color: #000;
   vertical-align: middle;
 }
 
