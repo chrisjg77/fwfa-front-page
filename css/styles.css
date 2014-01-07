@@ -329,21 +329,25 @@ BOOM COUNTERS
   bottom: -1.75em;
 }
 
-.boom-counter-base,
-.boom-counter-fill {
+.boom-counter-base {
   height: 1em;
   -webkit-border-radius:  0.5em;
   -moz-border-radius:     0.5em;
    border-radius:         0.5em;
-}
-
-.boom-counter-base {
   position: relative;
   background: #eee;
   border: 1px solid #ddd;
 }
 
 .boom-counter-fill {
+  height: 1em;
+  -webkit-border-top-left-radius:  0.5em;
+  -moz-border-top-left-radius:    0.5em;
+  border-top-left-radius:          0.5em;
+  -webkit-border-bottom-left-radius:  0.5em;
+  -moz-border-bottom-left-radius:    0.5em;
+  border-top-bottom-radius:          0.5em;
+  height: 1em;
   width: 0;
   background: #66A344;
 }
@@ -537,12 +541,12 @@ CANDIDATE FUNDRAISING
 }
 
 .candidate-fundraising .content {
-  padding: 2em;
+  padding: 2em 5.75em;
 }
 
 .candidate-fundraising h2 {
   position: relative;
-  padding: 0 3em 0 5.25em;
+  padding: 0 3em 0 2.5em;
   margin-top: 0.5em;
 }
 
@@ -550,7 +554,7 @@ CANDIDATE FUNDRAISING
 .more-info h2 .header-icon {
   position: absolute;
   top: -0.35em;
-  left: 2.75em;
+  left: 0;
   height: 2em;
   width: 2em;
   background: #c9431b;
@@ -579,7 +583,7 @@ CANDIDATE FUNDRAISING
   position: relative;
   list-style: none;
   margin: 0;
-  padding: 0 3em;
+  padding: 0;
   font-size: 0.9em;
 }
 
@@ -606,12 +610,12 @@ CANDIDATE FUNDRAISING
 }
 
 .candidates .previous-arrow {
-  left: 0;
+  left: -2.5em;
   opacity: 0.3;
 }
 
 .candidates .next-arrow {
-  right: 0;
+  right: -2.5em;
 }
 
 
@@ -644,6 +648,7 @@ CANDIDATE FUNDRAISING
   -moz-border-radius:     0.35em;
    border-radius:         0.35em;
   border: 0.25em solid rgba(0,0,0,0.05);
+  position: relative;
 }
 
 .candidates .candidate-headshot,
@@ -674,10 +679,24 @@ CANDIDATE FUNDRAISING
   display: block;
 }
 
-.candidates .candidate-info .candidate-name {
+.candidates .candidate-info .candidate-name,
+.candidates .candidate-info .candidate-name a {
   font-size: 1.1em;
   font-weight: bold;
+  z-index: 10;
+  position: relative;
+  color: #000;
 }
+
+.candidates .to-donate { 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
+.candidates .candidate-info .candidate-name a:hover { text-decoration: underline; }
 
 .candidates .candidate-info .candidate-seat,
 .candidates .candidate-info .candidate-progress {
@@ -1207,6 +1226,12 @@ MEDIA QUERIES
 
 }
 
+
+@media (min-width: 1024px) {
+
+
+
+}
 
 
 
