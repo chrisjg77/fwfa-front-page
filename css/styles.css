@@ -78,6 +78,13 @@ select {
   float: left;
 }
 
+header.wrapper {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
 
 /*
 ===============================================
@@ -229,7 +236,6 @@ SCAFFOLDING
   font-size: 1.25em;
 }
 
-.overall-fundraising,
 .candidate-fundraising,
 .news-and-press,
 .signup-form {
@@ -250,29 +256,35 @@ SCAFFOLDING
 }
 
 
+
 /*
 ===============================================
 NAV BAR
 ===============================================
 */
 
-.nav-bar {
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
-.nav-spacer {
-  height: 1.25em;
-  background: rgba(255,255,255,0.6);
-}
-
 .nav-content {
-  height: 4em;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+  display: block;
+  width: 100%;
+  height: 94px;
+  float: none;
+  border-bottom: 1px solid #d1d7e2;
+  text-align: center;
+  margin: 0;
 }
 
+header.wrapper { padding: 0; }
+
+header .inner a img { 
+  width: 158px;
+  height: 65px;
+  margin-top: 15px;
+}
+
+#primary-links ul li { display: none; }
+#primary-links ul li.last { display: block; }
+
+#primary-links .button.major { display: none; }
 
 /*
 ===============================================
@@ -319,7 +331,7 @@ BOOM COUNTERS
 
 .boom-counter-base,
 .boom-counter-fill {
-  height: 0.75em;
+  height: 1em;
   -webkit-border-radius:  0.5em;
   -moz-border-radius:     0.5em;
    border-radius:         0.5em;
@@ -407,7 +419,6 @@ OVERALL FUNDRAISING
 }
 
 .overall-fundraising .goal {
-  float: right;
   /*margin-right: 25%;*/
   font-weight: bold;
 }
@@ -447,16 +458,17 @@ OVERALL FUNDRAISING
   color: #fff;
   background: #c9431b;
   font-size: 0.85em;
-  padding: 0.35em 0;
+  padding: 0.65em 0;
   width: 85%;
-  -webkit-border-radius:  1em;
-  -moz-border-radius:     1em;
-   border-radius:         1em;
+  -webkit-border-radius:  1.5em;
+  -moz-border-radius:     1.5em;
+   border-radius:         1.5em;
    text-align: center;
 }
 
 .boom-counter-goal-highlight.outer,
 .boom-counter-goal-highlight.inner {
+  display: none;
   position: absolute;
   background: rgba(102, 163, 68, 0.13);
   top: 0;
@@ -484,7 +496,7 @@ OVERALL FUNDRAISING
 }
 
 .fundraising-categories {
-  margin-top: 3em;
+  margin-top: 5.5em;
 }
 
 .fundraising-categories li {
@@ -514,7 +526,14 @@ CANDIDATE FUNDRAISING
 */
 
 .candidate-fundraising {
-  background: #eee;
+  background: #f2f4f7;
+  background: -moz-linear-gradient(top, #f2f4f7 0%, #f2f4f7 27%, #e8ebf0 52%, #e8ebf0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f4f7), color-stop(27%,#f2f4f7), color-stop(52%,#e8ebf0), color-stop(100%,#e8ebf0));
+  background: -webkit-linear-gradient(top, #f2f4f7 0%,#f2f4f7 27%,#e8ebf0 52%,#e8ebf0 100%);
+  background: -o-linear-gradient(top, #f2f4f7 0%,#f2f4f7 27%,#e8ebf0 52%,#e8ebf0 100%);
+  background: -ms-linear-gradient(top, #f2f4f7 0%,#f2f4f7 27%,#e8ebf0 52%,#e8ebf0 100%);
+  background: linear-gradient(to bottom, #f2f4f7 0%,#f2f4f7 27%,#e8ebf0 52%,#e8ebf0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f4f7', endColorstr='#e8ebf0',GradientType=0 );
 }
 
 .candidate-fundraising .content {
@@ -570,9 +589,9 @@ CANDIDATE FUNDRAISING
   top: 50%;
   font-size: 1.3em;
   color: #fff;
-  background: #888;
-  width: 1.5em;
-  height: 1.5em;
+  background: #4488ab;
+  width: 1.75em;
+  height: 1.75em;
   margin-top: -0.65em;
   text-align: center;
   -webkit-border-radius:  0.25em;
@@ -583,7 +602,7 @@ CANDIDATE FUNDRAISING
 .candidates .next-arrow i,
 .candidates .previous-arrow i {
   position: relative;
-  top: 0.15em;
+  top: 0.35em;
 }
 
 .candidates .previous-arrow {
@@ -609,7 +628,6 @@ CANDIDATE FUNDRAISING
   display: table;
   width: 33.3333%;
   padding: 1em;
-  border-top: 1px solid #eee;
 }
 
 .candidate-meta {
@@ -664,7 +682,7 @@ CANDIDATE FUNDRAISING
 .candidates .candidate-info .candidate-seat,
 .candidates .candidate-info .candidate-progress {
   font-size: 0.85em;
-  color: #999;
+  color: #333;
   margin-bottom: 0.5em;
 }
 
@@ -713,6 +731,7 @@ MORE INFO
   width: 65%;
   margin-right: 4%;
   padding-right: 4%;
+  padding-bottom: 4em;
   border-right: 1px solid #ddd;
 }
 
@@ -911,10 +930,6 @@ MEDIA QUERIES
 
   .nav-spacer {
     display: none;
-  }
-
-  .nav-content {
-    height: 3em;
   }
 
   /*
@@ -1118,6 +1133,77 @@ MEDIA QUERIES
 
   .feature { display: block; }
 
+
+    .nav-bar {
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-spacer {
+    height: 1.25em;
+    background: rgba(255,255,255,0.6);
+    position: fixed;
+    z-index: 98;
+    width: 100%;
+  }
+
+  .nav-content {
+    height: 4em;
+    background: #ebeef2;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin-top: 1.25em;
+    text-align: left;
+  }
+
+  .nav-content img { width: 224px; }
+
+  header .inner a img { 
+    width: 224px;
+    height: auto;
+    margin-top: -15px;
+    margin-left: 1em;
+  }
+
+  .overall-fundraising {
+    border-top: 1px solid #ddd;
+  }
+
+  #primary-links .button.major { display: block; }
+
+  .button.major {
+    float: right;
+    background: #c9431b;
+    font-family: 'Raleway',sans-serif;
+    min-height: 36px;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 36px;
+    color: #fff;
+    padding: 0 20px;
+    border: none;
+    margin-right: 2%;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.6);
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+  }
+
+  .span3 { width: 30%; float: left; }
+  .span9 { width: 70%; float: left; }
 
 }
 
